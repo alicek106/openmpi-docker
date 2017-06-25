@@ -22,3 +22,5 @@ RUN make && make install
 # Set User 
 # USER ${USER}
 
+RUN yum install openssh-server -y
+RUN echo /usr/sbin/sshd >> /root/.bashrc && source /root/.bashrc
